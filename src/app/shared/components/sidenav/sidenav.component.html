@@ -1,0 +1,12 @@
+<mat-sidenav-container autosize class="example-container">
+  <mat-sidenav #drawer class="example-sidenav" mode="side">
+    <div class="menu-wrapper">
+      <button (click)="drawer.close()" mat-button routerLink="/home">Home</button>
+      <button (click)="drawer.close()" mat-button routerLink="/about">About</button>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

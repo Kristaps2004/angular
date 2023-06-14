@@ -25,13 +25,21 @@ import {ContactFormComponent} from "./home/components/contact-form/contact-form.
 import {TabComponent} from "./home/components/tab/tab.component";
 import {GalleryImgComponent} from "./home/components/gallery-img/gallery-img.component";
 import {GalleryComponent} from "./home/components/gallery/gallery.component";
-import { HomeComponent } from './home/components/home/home.component';
-import { AboutComponent } from './about/components/about/about.component';
+import {HomeComponent} from './home/components/home/home.component';
+import {AboutComponent} from './about/components/about/about.component';
+import {ToolbarComponent} from './shared/components/toolbar/toolbar.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {SidenavComponent} from './shared/components/sidenav/sidenav.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    ToolbarComponent,
+    SidenavComponent,
+
+    HomeComponent,
     PortfolioCardComponent,
     SkillsComponent,
     LanguagesComponent,
@@ -39,12 +47,14 @@ import { AboutComponent } from './about/components/about/about.component';
     TabComponent,
     GalleryImgComponent,
     GalleryComponent,
-    HomeComponent,
-    AboutComponent
+
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+
     MatCardModule,
     MatSlideToggleModule,
     MatDividerModule,
@@ -58,7 +68,9 @@ import { AboutComponent } from './about/components/about/about.component';
     MatFormFieldModule,
     MatInputModule,
     MatTabsModule,
-    ReactiveFormsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+
     AppRoutingModule,
   ],
 

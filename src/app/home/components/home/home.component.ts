@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
@@ -38,10 +38,10 @@ export class HomeComponent {
     {
       src: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
       alt: 'ok',
-    },{
+    }, {
       src: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
       alt: 'ok',
-    },{
+    }, {
       src: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
       alt: 'ok',
     },

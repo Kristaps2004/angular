@@ -4,7 +4,7 @@ import {Route, RouterModule} from '@angular/router';
 import {HomeComponent} from "./home/components/home/home.component";
 import {AboutComponent} from "./about/components/about/about.component";
 
-const routes:Route[] = [
+const routes: Route[] = [
   {
     path: '',
     redirectTo: 'home',
@@ -15,7 +15,7 @@ const routes:Route[] = [
     component: HomeComponent,
   },
   {
-    path:'about',
+    path: 'about',
     component: AboutComponent,
   }
 ]

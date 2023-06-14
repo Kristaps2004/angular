@@ -9,12 +9,13 @@ import {Router} from "@angular/router";
 })
 export class PortfolioCardComponent {
 
-    protected readonly onclick = onclick;
+  protected readonly onclick = onclick;
 
-constructor(
-  private router:Router
-) {
-}
+  constructor(
+    private router: Router
+  ) {
+  }
+
   clickButton(path: string) {
     this.router.navigate([path]);
   }
