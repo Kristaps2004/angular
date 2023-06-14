@@ -1,0 +1,15 @@
+.gallery-wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+
+  .img-gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    padding: 0;
+    max-width: calc(980px + (5 * 8px));
+    gap: 8px;
+  }
+}

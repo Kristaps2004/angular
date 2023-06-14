@@ -1,0 +1,50 @@
+:host, .img {
+  display: block;
+  float: left;
+  flex: 0 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  :host {
+    width: calc((100% / 5) - (8px));
+  }
+  .img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  :host {
+    width: calc((100% / 4) - (8px));
+  }
+  .img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  :host {
+    width: calc((100% / 3) - (8px));
+  }
+  .img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  :host {
+    width: calc((100% / 2) - (8px));
+  }
+  .img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :host {
+    width: 100%;
+  }
+  .img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,63 @@
+<div class="form">
+  <div class="form-wrapper">
+    <h1>Contact:</h1>
+    <div class="field-container">
+      <form (ngSubmit)="submitForm()" [formGroup]="profileForm">
+        <mat-form-field appearance="fill" id="name">
+          <mat-label>Enter your name</mat-label>
+          <input
+            formControlName="name"
+            matInput
+            placeholder="Artjoms"
+            required
+          />
+          <mat-error *ngIf="profileForm.get('name')?.invalid"
+          >{{errorMessage}}</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your surname</mat-label>
+          <input
+            formControlName="surname"
+            id="surname"
+            matInput
+            placeholder="Artjoms"
+            required
+          />
+          <mat-error *ngIf="profileForm.get('surname')?.invalid"
+          >{{errorMessage}}</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input
+            formControlName="email"
+            id="email"
+            matInput
+            placeholder="pat@example.com"
+            required
+          />
+          <mat-error *ngIf="profileForm.get('msg')?.invalid"
+          >{{errorMessage}}</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Textarea</mat-label>
+          <textarea formControlName="msg" id="msg" matInput></textarea>
+        </mat-form-field>
+        <button
+          (click)="openSnackBar()"
+          [disabled]="profileForm.invalid"
+          class="snack-bar"
+          mat-stroked-button
+          type="submit"
+        >
+          Update Name
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
