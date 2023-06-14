@@ -1,6 +1,4 @@
 import {Component} from '@angular/core';
-import {Router} from "@angular/router";
-
 
 @Component({
   selector: 'app-portfolio-card',
@@ -11,14 +9,6 @@ export class PortfolioCardComponent {
 
   protected readonly onclick = onclick;
 
-  constructor(
-    private router: Router
-  ) {
-  }
-
-  clickButton(path: string) {
-    this.router.navigate([path]);
-  }
 }
 
 

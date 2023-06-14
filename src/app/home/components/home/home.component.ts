@@ -22,35 +22,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class HomeComponent {
   displayedColumns: string[] = ["lang", "name", "weight", "symbol"];
-  gallery: { src: string; alt: string }[] = [
-    {
-      src: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-      alt: 'ok',
-    },
-    {
-      src: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-      alt: 'ok',
-    },
-    {
-      src: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-      alt: 'ok',
-    },
-    {
-      src: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-      alt: 'ok',
-    }, {
-      src: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-      alt: 'ok',
-    }, {
-      src: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-      alt: 'ok',
-    },
 
-    {
-      src: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-      alt: 'ok',
-    }
-  ]
   dataSource = ELEMENT_DATA;
   profileForm = new FormGroup({
     email: new FormControl("", [Validators.required, Validators.email]),
