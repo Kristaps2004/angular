@@ -23,14 +23,15 @@ import {SkillsComponent} from "./home/components/skills/skills.component";
 import {LanguagesComponent} from "./home/components/languages/languages.component";
 import {ContactFormComponent} from "./home/components/contact-form/contact-form.component";
 import {TabComponent} from "./home/components/tab/tab.component";
-import {GalleryImgComponent} from "./home/components/gallery-img/gallery-img.component";
-import {GalleryComponent} from "./home/components/gallery/gallery.component";
+import {GalleryImgComponent} from "./gallery/components/gallery-img/gallery-img.component";
+import {GalleryComponent} from "./gallery/components/gallery/gallery.component";
 import {HomeComponent} from './home/components/home/home.component';
 import {AboutComponent} from './about/components/about/about.component';
 import {ToolbarComponent} from './shared/components/toolbar/toolbar.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {SidenavComponent} from './shared/components/sidenav/sidenav.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { GalleryCardComponent } from './gallery/components/gallery-card/gallery-card.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     GalleryComponent,
 
     AboutComponent,
+      GalleryCardComponent,
   ],
   imports: [
     BrowserModule,
