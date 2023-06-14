@@ -1,0 +1,12 @@
+<div class="content">
+  <h1>Gallery</h1>
+  <div class="gallery-wrapper">
+    <div class="img-gallery">
+      <app-gallery-img
+        *ngFor="let item of gallery"
+        [alt]="item.alt"
+        [img]="item.src"></app-gallery-img>
+    </div>
+  </div>
+  <app-gallery-card></app-gallery-card>
+</div>
