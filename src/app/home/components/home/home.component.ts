@@ -47,13 +47,13 @@ export class HomeComponent {
   getErrorMessage() {
     switch (true) {
       case this.profileForm.get("name")?.hasError("required"):
-        return "You must enter a value";
+        return "You must enter a name";
       case this.profileForm.get("surname")?.hasError("required"):
-        return "You must enter name";
+        return "You must enter surname";
       case this.profileForm.get("email")?.hasError("required"):
         return "Can't be empty";
       case this.profileForm.get("msg")?.hasError("required"):
-        return "empty";
+        return "Can't be empty";
       default:
         return "";
     }

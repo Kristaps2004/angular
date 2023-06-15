@@ -4,14 +4,6 @@
     <mat-card-title>Shiba Inu</mat-card-title>
     <mat-card-subtitle>Such wow doge</mat-card-subtitle>
     <div class="menu-icon-wrapper">
-      <button
-        [matMenuTriggerFor]="menu"
-        aria-label="Example icon-button with a menu"
-        class="menu-icon"
-        mat-icon-button
-      >
-        <mat-icon>more_vert</mat-icon>
-      </button>
     </div>
   </mat-card-header>
   <img
@@ -23,18 +15,3 @@
     <ng-content></ng-content>
   </mat-card-content>
 </mat-card>
-
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>home</mat-icon>
-    <span>Home</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>search</mat-icon>
-    <span>About</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>settings</mat-icon>
-    <span>Settings</span>
-  </button>
-</mat-menu>
