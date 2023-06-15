@@ -117,7 +117,7 @@ export class GalleryComponent {
 
   constructor(public dialog: MatDialog) {
   }
-  
+
   public openDialog(img: { src: string; alt: string; thumbSrc: string }): void {
     this.bigImg = img.src;
     this.dialog.open(
