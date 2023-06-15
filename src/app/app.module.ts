@@ -31,7 +31,9 @@ import {ToolbarComponent} from './shared/components/toolbar/toolbar.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {SidenavComponent} from './shared/components/sidenav/sidenav.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
-import { GalleryCardComponent } from './gallery/components/gallery-card/gallery-card.component';
+import {NgOptimizedImage} from "@angular/common";
+import {GalleryDialogComponent} from './gallery/components/gallery-dialog/gallery-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -50,7 +52,8 @@ import { GalleryCardComponent } from './gallery/components/gallery-card/gallery-
     GalleryComponent,
 
     AboutComponent,
-      GalleryCardComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -74,6 +77,9 @@ import { GalleryCardComponent } from './gallery/components/gallery-card/gallery-
     MatSidenavModule,
 
     AppRoutingModule,
+    NgOptimizedImage,
+    MatDialogModule,
+    GalleryDialogComponent,
   ],
 
   providers: [],
