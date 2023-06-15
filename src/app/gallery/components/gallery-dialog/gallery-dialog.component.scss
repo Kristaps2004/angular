@@ -1,0 +1,44 @@
+.example-card {
+  padding: 20px;
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .menu-icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 10%;
+  }
+
+  .img{
+    max-height: 80vh;
+  }
+}
+
+.mat-mdc-card-header{
+  padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .example-card {
+    padding: 10px;
+
+    .img{
+      max-height: 90vh;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .example-card {
+    max-width: 95vw;
+    padding: 10px;
+
+    .img{
+      max-height: 70vh;
+    }
+  }
+}
+

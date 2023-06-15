@@ -1,19 +1,24 @@
-.content{
+.content {
   margin: 30px;
-}
 
-.gallery-wrapper {
-  max-width: 960px;
-  margin: 0 auto;
+  .gallery-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
 
-  .img-gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: stretch;
-    padding: 0;
-    max-width: calc(980px + (5 * 8px));
-    gap: 8px;
+    .img-gallery {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      padding: 0;
+      max-width: calc(980px + (5 * 8px));
+      gap: 8px;
+    }
+  }
+
+  .card-wrapper {
+    justify-content: center;
   }
 }
+

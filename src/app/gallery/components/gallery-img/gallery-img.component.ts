@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-gallery-img',
@@ -6,9 +6,16 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./gallery-img.component.scss']
 })
 export class GalleryImgComponent {
-  @Input()
-  public img!: string;
 
   @Input()
-  public alt!: string;
+  public item!: { src: string; alt: string; thumbSrc: string };
+  protected readonly onclick = onclick;
+
+  @Output()
+  private imgClick: EventEmitter<void> = new EventEmitter<void>();
+
+
+  public onClick(): void {
+    this.imgClick.emit();
+  }
 }

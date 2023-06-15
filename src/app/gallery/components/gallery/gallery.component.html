@@ -3,10 +3,10 @@
   <div class="gallery-wrapper">
     <div class="img-gallery">
       <app-gallery-img
+        (imgClick)="openDialog(item)"
         *ngFor="let item of gallery"
-        [alt]="item.alt"
-        [img]="item.src"></app-gallery-img>
+        [item]="item"
+      ></app-gallery-img>
     </div>
   </div>
-  <app-gallery-card></app-gallery-card>
 </div>
