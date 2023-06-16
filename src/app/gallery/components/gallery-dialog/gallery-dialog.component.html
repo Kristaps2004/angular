@@ -1,8 +1,8 @@
 <mat-card class="example-card">
   <mat-card-header>
     <div class="example-header-image" mat-card-avatar></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Such wow doge</mat-card-subtitle>
+    <mat-card-title>Kristaps Ešmits</mat-card-title>
+    <mat-card-subtitle>Somewhere</mat-card-subtitle>
     <div class="menu-icon-wrapper">
       <button
         [matMenuTriggerFor]="menu"
@@ -15,24 +15,27 @@
     </div>
   </mat-card-header>
   <img
-    [src]="data.img"
+    [src]="currentImg"
     alt="Photo of a Shiba Inu"
     class="img"
     mat-card-image
   />
+  <div>
+    <button (click)="prevImg()" mat-button>
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <button (click)="nextImg()" mat-button>
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
 </mat-card>
 
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>home</mat-icon>
-    <span>Home</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>search</mat-icon>
-    <span>About</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>settings</mat-icon>
-    <span>Settings</span>
-  </button>
+  <a [href]="currentImg"
+     download
+     mat-menu-item
+  >
+    <mat-icon>download</mat-icon>
+    <span>Download</span>
+  </a>
 </mat-menu>

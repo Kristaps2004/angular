@@ -125,6 +125,7 @@ export class GalleryComponent {
       {
         data: {
           img: img.src,
+          gallery: this.gallery,
         }
       });
   }

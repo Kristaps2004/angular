@@ -13,7 +13,34 @@ import {MatMenuModule} from "@angular/material/menu";
   imports: [MatDialogModule, MatButtonModule, MatCardModule, MatIconModule, MatMenuModule],
 })
 export class GalleryDialogComponent {
+  public currentImg!: string;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { img: string }) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: {
+    img: string;
+    gallery: { src: string; alt: string; thumbSrc: string }[]
+  }) {
+    this.currentImg = this.data.img
+  }
+
+  public prevImg(): void {
+    const currentIndex = this.data.gallery.findIndex(
+      (item) => {
+        return item.src === this.currentImg
+      }
+    );
+    const nextIndex = currentIndex === 0 ? (this.data.gallery.length - 1) : currentIndex - 1;
+
+    this.currentImg = this.data.gallery[nextIndex].src
+  }
+
+  public nextImg(): void {
+    const currentIndex = this.data.gallery.findIndex(
+      (item) => {
+        return item.src === this.currentImg
+      }
+    );
+    const nextIndex = currentIndex === (this.data.gallery.length - 1) ? 0 : currentIndex + 1;
+
+    this.currentImg = this.data.gallery[nextIndex].src
   }
 }

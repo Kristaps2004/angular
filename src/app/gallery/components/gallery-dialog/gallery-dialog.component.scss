@@ -1,8 +1,12 @@
 .example-card {
   padding: 20px;
 
+  .mat-mdc-card-header {
+    padding: 0;
+  }
+
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('https://cdn.discordapp.com/attachments/780878761536389141/1119146726847168572/tmp_0bec7548-60c0-4727-94f6-9fc4f48bdf83.jpg');
     background-size: cover;
   }
 
@@ -15,10 +19,11 @@
   .img {
     max-height: 80vh;
   }
-}
 
-.mat-mdc-card-header {
-  padding: 0;
+  .mat-mdc-button {
+    width: 10px;
+    height: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -31,7 +36,7 @@
   }
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 480px) {
   .example-card {
     max-width: 95vw;
     padding: 10px;
