@@ -13,7 +13,9 @@
 
     <app-tab></app-tab>
 
-    <app-contact-form (onOpenSnackBar)="openSnackBar()" (onSubmit)="onSubmit()" [errorMessage]="getErrorMessage()"
-                      [profileForm]="profileForm"></app-contact-form>
+
   </ng-container>
 </app-portfolio-card>
+
+<app-contact-form (onOpenSnackBar)="openSnackBar()" (onSubmit)="onSubmit()" [errorMessage]="getErrorMessage()"
+                  [profileForm]="profileForm"></app-contact-form>
