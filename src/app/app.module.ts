@@ -34,7 +34,9 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {NgOptimizedImage} from "@angular/common";
 import {GalleryDialogComponent} from './gallery/components/gallery-dialog/gallery-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
-
+import {ProjectGridComponent} from './about/components/project-grid/project-grid.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {ProjectImgComponent} from "./about/components/project-img/project-img.component";
 
 @NgModule({
   declarations: [
@@ -52,6 +54,9 @@ import {MatDialogModule} from "@angular/material/dialog";
     GalleryComponent,
 
     AboutComponent,
+
+    ProjectGridComponent,
+    ProjectImgComponent,
 
 
   ],
@@ -80,6 +85,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     NgOptimizedImage,
     MatDialogModule,
     GalleryDialogComponent,
+    MatGridListModule,
   ],
 
   providers: [],
