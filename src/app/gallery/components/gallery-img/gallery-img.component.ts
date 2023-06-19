@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {GalleryImg} from "../../interfaces/gallery-img.interface";
 
 @Component({
   selector: 'app-gallery-img',
@@ -8,7 +9,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 export class GalleryImgComponent {
 
   @Input()
-  public item!: { src: string; alt: string; thumbSrc: string };
+  public item!: GalleryImg;
   protected readonly onclick = onclick;
 
   @Output()

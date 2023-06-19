@@ -2,7 +2,9 @@
   <mat-card-header>
     <div class="example-header-image" mat-card-avatar></div>
     <mat-card-title>Kristaps Ešmits</mat-card-title>
-    <mat-card-subtitle>Somewhere</mat-card-subtitle>
+    <mat-card-subtitle>
+      {{currentImg.alt}}
+    </mat-card-subtitle>
     <div class="menu-icon-wrapper">
       <button
         [matMenuTriggerFor]="menu"
@@ -14,11 +16,8 @@
       </button>
     </div>
   </mat-card-header>
-  <img
-    [src]="currentImg"
-    alt="Photo of a Shiba Inu"
-    class="img"
-    mat-card-image
+  <img [src]="currentImg.src"
+       class="img"
   />
   <div>
     <button (click)="prevImg()" mat-button>
@@ -31,7 +30,7 @@
 </mat-card>
 
 <mat-menu #menu="matMenu">
-  <a [href]="currentImg"
+  <a [href]="currentImg.src"
      download
      mat-menu-item
   >
