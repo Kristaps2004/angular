@@ -1,13 +1,23 @@
 .example-card {
   padding: 20px;
 
-  .mat-mdc-card-header {
+  .mat-card-subtitle {
     padding: 0;
   }
 
+  mat-card-subtitle{
+    display: flex;
+    align-content: center;
+  }
   .example-header-image {
     background-image: url('https://cdn.discordapp.com/attachments/780878761536389141/1119146726847168572/tmp_0bec7548-60c0-4727-94f6-9fc4f48bdf83.jpg');
     background-size: cover;
+  }
+
+  .location-icon{
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
   }
 
   .menu-icon-wrapper {

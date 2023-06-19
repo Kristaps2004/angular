@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {AboutImg} from "../../interfaces/about-img.interface";
 
+
 @Component({
   selector: 'app-project-img',
   templateUrl: './project-img.component.html',
@@ -11,3 +12,5 @@ export class ProjectImgComponent {
   public item!: AboutImg;
 
 }
+
+

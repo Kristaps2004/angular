@@ -38,6 +38,7 @@ import {ProjectGridComponent} from './about/components/project-grid/project-grid
 import {MatGridListModule} from "@angular/material/grid-list";
 import {ProjectImgComponent} from "./about/components/project-img/project-img.component";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,6 @@ import {ProjectImgComponent} from "./about/components/project-img/project-img.co
     GalleryComponent,
 
     AboutComponent,
-
     ProjectGridComponent,
     ProjectImgComponent,
 
