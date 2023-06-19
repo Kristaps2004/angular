@@ -1,0 +1,19 @@
+<div class="content">
+  <div class="projects-wrapper">
+    <div class="title">
+      <h1>Projects</h1>
+    </div>
+    <mat-grid-list cols="3" gutterSize="40px" rowHeight="2:1">
+      <mat-grid-tile
+        *ngFor="let item of gallery">
+        <app-project-img
+          [item]="item"
+        ></app-project-img>
+        <mat-grid-tile-footer>{{item.alt}}</mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <div class="button">
+      <button (click)="goToUrl()" mat-stroked-button>More Projects</button>
+    </div>
+  </div>
+</div>
