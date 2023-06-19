@@ -9,7 +9,15 @@
         <app-project-img
           [item]="item"
         ></app-project-img>
-        <mat-grid-tile-footer>{{item.alt}}</mat-grid-tile-footer>
+        <mat-grid-tile-footer>
+          <h1>{{item.alt}}</h1>
+          <div class="button">
+            <button (click)="goToUrl()" mat-stroked-button>More Projects</button>
+          </div>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+      <mat-grid-tile *ngFor="let repo of githubRepos">
+        {{repo.name}}
       </mat-grid-tile>
     </mat-grid-list>
     <div class="button">

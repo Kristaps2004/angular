@@ -1,6 +1,7 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, Input} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
 import {AboutImg} from "../../interfaces/about-img.interface";
+import {GithubRepo} from "../../interfaces/github-repo.interface";
 
 @Component({
   selector: 'app-project-grid',
@@ -31,8 +32,12 @@ export class ProjectGridComponent {
     },
   ]
 
-  constructor(@Inject(DOCUMENT) private document: Document) {
+  @Input()
+  public githubRepos : GithubRepo[] = []
+
+  constructor(@Inject(DOCUMENT) private document: Document){
   }
+
 
   public goToUrl(): void {
     this.document.location.href = "https://github.com/Kristaps2004";
