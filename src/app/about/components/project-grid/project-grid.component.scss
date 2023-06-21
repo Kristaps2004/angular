@@ -12,14 +12,65 @@
     mat-grid-tile {
       background: lightblue;
       max-width: 500px;
+
+      .repo-thumb {
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 
-  .button {
-    display: flex;
-    justify-content: center;
+  mat-grid-tile-footer {
+    height: 30%;
+    justify-content: space-between;
+
+    h1 {
+      margin: 0;
+      font-size: 2vh;
+    }
+
+    .button-repo {
+      color: white;
+      border-color: white;
+      width: 100%;
+    }
   }
 }
 
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.repo-owner {
+  font-size: 18px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  .profile-img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  .repo-owner {
+    font-size: 12px;
+  }
+}
 
 

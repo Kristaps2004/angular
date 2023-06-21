@@ -3,25 +3,26 @@
     <div class="title">
       <h1>Projects</h1>
     </div>
-    <mat-grid-list cols="3" gutterSize="40px" rowHeight="2:1">
-      <mat-grid-tile
-        *ngFor="let item of gallery">
-        <app-project-img
-          [item]="item"
-        ></app-project-img>
+    <mat-grid-list [cols]="columnNum" gutterSize="40px" rowHeight="2:1">
+      <mat-grid-tile *ngFor="let repo of githubRepos">
+        <img class="repo-thumb" [src]="repo.image" *ngIf="repo.image">
         <mat-grid-tile-footer>
-          <h1>{{item.alt}}</h1>
-          <div class="button">
-            <button (click)="goToUrl()" mat-stroked-button>More Projects</button>
+          <div class="footer-container">
+            <h1>{{repo.name}}</h1>
+            <div class="footer-wrapper">
+              <img class="profile-img" src="{{repo.owner.avatar_url}}" alt="profile picture">
+              <h1 class="repo-owner">{{repo.owner.login}}</h1>
+            </div>
+          </div>
+          <div>
+            <button class="button-repo" (click)="goToUrl(repo.html_url)" mat-stroked-button>Open in github</button>
           </div>
         </mat-grid-tile-footer>
       </mat-grid-tile>
-      <mat-grid-tile *ngFor="let repo of githubRepos">
-        {{repo.name}}
-      </mat-grid-tile>
     </mat-grid-list>
     <div class="button">
-      <button (click)="goToUrl()" mat-stroked-button>More Projects</button>
+      <button (click)="goToUrl('https://github.com/Kristaps2004')" mat-stroked-button>More Projects</button>
     </div>
+
   </div>
 </div>

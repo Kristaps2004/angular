@@ -2,6 +2,7 @@ export interface GithubRepo {
   id: number,
   node_id: string,
   name: string,
+  image?: string,
   full_name: string,
   private: boolean,
   owner: {

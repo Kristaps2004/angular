@@ -36,7 +36,6 @@ import {GalleryDialogComponent} from './gallery/components/gallery-dialog/galler
 import {MatDialogModule} from "@angular/material/dialog";
 import {ProjectGridComponent} from './about/components/project-grid/project-grid.component';
 import {MatGridListModule} from "@angular/material/grid-list";
-import {ProjectImgComponent} from "./about/components/project-img/project-img.component";
 import {HttpClientModule} from '@angular/common/http';
 
 
@@ -57,8 +56,6 @@ import {HttpClientModule} from '@angular/common/http';
 
     AboutComponent,
     ProjectGridComponent,
-    ProjectImgComponent,
-
 
   ],
   imports: [
