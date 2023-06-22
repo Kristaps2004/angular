@@ -22,11 +22,10 @@ import {PortfolioCardComponent} from "./home/components/portfolio-card/portfolio
 import {SkillsComponent} from "./home/components/skills/skills.component";
 import {LanguagesComponent} from "./home/components/languages/languages.component";
 import {ContactFormComponent} from "./home/components/contact-form/contact-form.component";
-import {TabComponent} from "./home/components/tab/tab.component";
 import {GalleryImgComponent} from "./gallery/components/gallery-img/gallery-img.component";
 import {GalleryComponent} from "./gallery/components/gallery/gallery.component";
 import {HomeComponent} from './home/components/home/home.component';
-import {AboutComponent} from './about/components/about/about.component';
+import {ProjectsComponent} from './projects/components/projects/projects.component';
 import {ToolbarComponent} from './shared/components/toolbar/toolbar.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {SidenavComponent} from './shared/components/sidenav/sidenav.component';
@@ -34,9 +33,12 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {NgOptimizedImage} from "@angular/common";
 import {GalleryDialogComponent} from './gallery/components/gallery-dialog/gallery-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
-import {ProjectGridComponent} from './about/components/project-grid/project-grid.component';
+import {ProjectGridComponent} from './projects/components/project-grid/project-grid.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import {HttpClientModule} from '@angular/common/http';
+import {HeroSectionComponent} from './home/components/hero-section/hero-section.component';
+import {MatListModule} from "@angular/material/list";
+import { ProjectsPreviewComponent } from './home/components/projects-preview/projects-preview.component';
 
 
 @NgModule({
@@ -46,15 +48,17 @@ import {HttpClientModule} from '@angular/common/http';
     SidenavComponent,
 
     HomeComponent,
+    HeroSectionComponent,
     PortfolioCardComponent,
     SkillsComponent,
     LanguagesComponent,
     ContactFormComponent,
-    TabComponent,
+
     GalleryImgComponent,
     GalleryComponent,
+    ProjectsPreviewComponent,
 
-    AboutComponent,
+    ProjectsComponent,
     ProjectGridComponent,
 
   ],
@@ -85,6 +89,7 @@ import {HttpClientModule} from '@angular/common/http';
     GalleryDialogComponent,
     MatGridListModule,
     HttpClientModule,
+    MatListModule,
   ],
 
   providers: [],

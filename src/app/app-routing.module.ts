@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {Route, RouterModule} from '@angular/router';
 import {HomeComponent} from "./home/components/home/home.component";
 import {GalleryComponent} from "./gallery/components/gallery/gallery.component";
-import {AboutComponent} from "./about/components/about/about.component";
+import {ProjectsComponent} from "./projects/components/projects/projects.component";
 
 const routes: Route[] = [
   {
@@ -20,8 +20,8 @@ const routes: Route[] = [
     component: GalleryComponent,
   },
   {
-    path: 'about',
-    component: AboutComponent,
+    path: 'projects',
+    component: ProjectsComponent,
   },
 ]
 
