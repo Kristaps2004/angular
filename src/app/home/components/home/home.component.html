@@ -1,14 +1,10 @@
-<app-portfolio-card>
-  <ng-container>
+<app-hero-section></app-hero-section>
 
-    <app-skills></app-skills>
+<app-languages [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-languages>
 
-    <app-languages [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-languages>
+<app-skills></app-skills>
 
-    <app-tab></app-tab>
-
-  </ng-container>
-</app-portfolio-card>
+<app-projects-preview></app-projects-preview>
 
 <app-contact-form (onOpenSnackBar)="openSnackBar()" (onSubmit)="onSubmit()" [errorMessage]="getErrorMessage()"
                   [profileForm]="profileForm"></app-contact-form>
