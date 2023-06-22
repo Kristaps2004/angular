@@ -5,12 +5,12 @@ import {GithubRepo} from "../../interfaces/github-repo.interface";
 
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.scss']
 })
 
-export class AboutComponent {
+export class ProjectsComponent {
   public githubRepos: GithubRepo[] = [];
   private githubReposImage: { name: string, image: string } [] = [
     {

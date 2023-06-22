@@ -8,19 +8,17 @@ import {GithubRepo} from "../../interfaces/github-repo.interface";
   templateUrl: './project-grid.component.html',
   styleUrls: ['./project-grid.component.scss']
 })
-export class ProjectGridComponent implements OnInit{
+export class ProjectGridComponent implements OnInit {
   @Input()
   public githubRepos: GithubRepo[] = []
+  columnNum: number = 3;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
   }
 
-
   public goToUrl(link: string): void {
     window.open(link, '_blank');
   }
-
-  columnNum : number = 3;
 
   @HostListener("window:resize", []) update() {
 
@@ -32,7 +30,7 @@ export class ProjectGridComponent implements OnInit{
       this.columnNum = 3;
     } else if (window.innerWidth >= 992) {
       this.columnNum = 2;
-    } else if (window.innerWidth  >= 700) {
+    } else if (window.innerWidth >= 700) {
       this.columnNum = 2;
     } else if (window.innerWidth < 700) {
       this.columnNum = 1;
