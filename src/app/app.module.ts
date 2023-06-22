@@ -18,7 +18,6 @@ import {MatInputModule} from "@angular/material/input";
 import {MatTabsModule} from "@angular/material/tabs";
 import {ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule} from './app-routing.module';
-import {PortfolioCardComponent} from "./home/components/portfolio-card/portfolio-card.component";
 import {SkillsComponent} from "./home/components/skills/skills.component";
 import {LanguagesComponent} from "./home/components/languages/languages.component";
 import {ContactFormComponent} from "./home/components/contact-form/contact-form.component";
@@ -49,7 +48,6 @@ import { ProjectsPreviewComponent } from './home/components/projects-preview/pro
 
     HomeComponent,
     HeroSectionComponent,
-    PortfolioCardComponent,
     SkillsComponent,
     LanguagesComponent,
     ContactFormComponent,
