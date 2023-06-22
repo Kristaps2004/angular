@@ -5,6 +5,9 @@
   </button>
   <span>Angular Portfolio</span>
   <span class="example-spacer"></span>
+  <mat-icon>light_mode</mat-icon>
+  <mat-slide-toggle [checked]="isDarkTheme$ | async" (change)="onThemeChange($event)"></mat-slide-toggle>
+  <mat-icon>nightlight</mat-icon>
   <button aria-label="Example icon-button with share icon" class="example-icon" mat-icon-button>
     <mat-icon>settings</mat-icon>
   </button>
