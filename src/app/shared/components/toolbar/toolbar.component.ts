@@ -1,5 +1,4 @@
-import {Component, EventEmitter, HostBinding, Output} from '@angular/core';
-import {FormControl} from "@angular/forms";
+import {Component, EventEmitter, Output} from '@angular/core';
 import {ThemeService} from "../../services/theme.service";
 import {Observable, startWith} from "rxjs";
 import {MatSlideToggleChange} from "@angular/material/slide-toggle";
@@ -13,7 +12,7 @@ export class ToolbarComponent {
   @Output()
   public toggleSideNav: EventEmitter<void> = new EventEmitter<void>();
 
-  public isDarkTheme$:Observable<boolean>;
+  public isDarkTheme$: Observable<boolean>;
 
   constructor(
     public themeService: ThemeService,
@@ -23,6 +22,7 @@ export class ToolbarComponent {
         startWith(false)
       );
   }
+
   public onToggleSideNav(): void {
     this.toggleSideNav.emit();
   }
