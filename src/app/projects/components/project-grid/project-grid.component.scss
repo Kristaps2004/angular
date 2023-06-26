@@ -1,5 +1,7 @@
 mat-grid-list {
-  margin: 30px;
+  display: flex;
+  margin: 10px;
+  align-items: center;
 
   mat-grid-tile {
     background: lightblue;

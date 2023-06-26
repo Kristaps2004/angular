@@ -11,10 +11,9 @@ import {DOCUMENT} from "@angular/common";
 })
 export class AppComponent {
 
-  private window :  Window;
-
   @ViewChild('sidenav')
   public sideNav!: ElementRef;
+  private window: Window;
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
@@ -26,7 +25,7 @@ export class AppComponent {
         filter(
           (event) => event instanceof NavigationEnd
         ),
-        tap((event) => this.document.querySelector('.mat-sidenav-content')?.scrollTo(0, 0))
+        tap(() => this.document.querySelector('.mat-sidenav-content')?.scrollTo(0, 0))
       )
       .subscribe();
   }

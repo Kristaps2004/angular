@@ -1,6 +1,6 @@
 <mat-grid-list [cols]="columnNum" gutterSize="40px" rowHeight="2:1">
   <mat-grid-tile *ngFor="let repo of githubRepos">
-    <img *ngIf="repo.image" [src]="repo.image" class="repo-thumb">
+    <img alt="repo thumb" *ngIf="repo.image" [src]="repo.image" class="repo-thumb">
     <mat-grid-tile-footer>
       <div class="footer-container">
         <h1>{{repo.name}}</h1>
@@ -15,4 +15,3 @@
     </mat-grid-tile-footer>
   </mat-grid-tile>
 </mat-grid-list>
-

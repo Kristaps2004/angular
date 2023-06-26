@@ -15,9 +15,11 @@ export class ProjectGridComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private document: Document) {
   }
+
   public goToUrl(link: string): void {
     window.open(link, '_blank');
   }
+
   @HostListener("window:resize", []) update() {
 
     switch (true) {
