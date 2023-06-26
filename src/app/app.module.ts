@@ -37,7 +37,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {HttpClientModule} from '@angular/common/http';
 import {HeroSectionComponent} from './home/components/hero-section/hero-section.component';
 import {MatListModule} from "@angular/material/list";
-import { ProjectsPreviewComponent } from './home/components/projects-preview/projects-preview.component';
+import {ProjectsPreviewComponent} from './home/components/projects-preview/projects-preview.component';
 
 
 @NgModule({

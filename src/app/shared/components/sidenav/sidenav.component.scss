@@ -1,5 +1,5 @@
 .example-container {
-  height: 92%;
+  height: calc(100% - 64px);
 }
 
 .example-sidenav-content {
@@ -16,4 +16,11 @@
 .menu-wrapper {
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 599px) {
+  .example-container {
+    height: calc(100% - 59px);
+  }
+
 }

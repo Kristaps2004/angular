@@ -36,7 +36,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .example-card {
     padding: 10px;
 
