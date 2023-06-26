@@ -1,28 +1,18 @@
-<div class="content">
-  <div class="projects-wrapper">
-    <div class="title">
-      <h1>Projects</h1>
-    </div>
-    <mat-grid-list [cols]="columnNum" gutterSize="40px" rowHeight="2:1">
-      <mat-grid-tile *ngFor="let repo of githubRepos">
-        <img *ngIf="repo.image" [src]="repo.image" class="repo-thumb">
-        <mat-grid-tile-footer>
-          <div class="footer-container">
-            <h1>{{repo.name}}</h1>
-            <div class="footer-wrapper">
-              <img alt="profile picture" class="profile-img" src="{{repo.owner.avatar_url}}">
-              <h1 class="repo-owner">{{repo.owner.login}}</h1>
-            </div>
-          </div>
-          <div>
-            <button (click)="goToUrl(repo.html_url)" class="button-repo" mat-stroked-button>Open in github</button>
-          </div>
-        </mat-grid-tile-footer>
-      </mat-grid-tile>
-    </mat-grid-list>
-    <div class="button">
-      <button (click)="goToUrl('https://github.com/Kristaps2004')" mat-stroked-button>More Projects</button>
-    </div>
+<mat-grid-list [cols]="columnNum" gutterSize="40px" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let repo of githubRepos">
+    <img *ngIf="repo.image" [src]="repo.image" class="repo-thumb">
+    <mat-grid-tile-footer>
+      <div class="footer-container">
+        <h1>{{repo.name}}</h1>
+        <div class="footer-wrapper">
+          <img alt="profile picture" class="profile-img" src="{{repo.owner.avatar_url}}">
+          <h1 class="repo-owner">{{repo.owner.login}}</h1>
+        </div>
+      </div>
+      <div>
+        <button (click)="goToUrl(repo.html_url)" class="button-repo" mat-stroked-button>Open in github</button>
+      </div>
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
 
-  </div>
-</div>

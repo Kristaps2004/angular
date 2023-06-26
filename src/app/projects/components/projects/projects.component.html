@@ -1,2 +1,11 @@
-<app-project-grid [githubRepos]="githubRepos"></app-project-grid>
-
+<div class="content">
+  <div class="projects-wrapper">
+    <div class="title">
+      <h1 class="title">Projects</h1>
+    </div>
+    <app-project-grid [githubRepos]="githubRepos$ | async"></app-project-grid>
+    <div class="button">
+      <button (click)="goToUrl('https://github.com/Kristaps2004')" mat-stroked-button>More Projects</button>
+    </div>
+  </div>
+</div>

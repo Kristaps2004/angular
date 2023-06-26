@@ -10,30 +10,35 @@ import {GithubRepo} from "../../interfaces/github-repo.interface";
 })
 export class ProjectGridComponent implements OnInit {
   @Input()
-  public githubRepos: GithubRepo[] = []
-  columnNum: number = 3;
+  public githubRepos: GithubRepo[] | null = []
+  public columnNum: number = 3;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
   }
-
   public goToUrl(link: string): void {
     window.open(link, '_blank');
   }
-
   @HostListener("window:resize", []) update() {
 
-    if (window.innerWidth >= 2500) {
-      this.columnNum = 5;
-    } else if (window.innerWidth >= 2000) {
-      this.columnNum = 4;
-    } else if (window.innerWidth >= 1200) {
-      this.columnNum = 3;
-    } else if (window.innerWidth >= 992) {
-      this.columnNum = 2;
-    } else if (window.innerWidth >= 700) {
-      this.columnNum = 2;
-    } else if (window.innerWidth < 700) {
-      this.columnNum = 1;
+    switch (true) {
+      case window.innerWidth >= 2500:
+        this.columnNum = 5;
+        break;
+      case window.innerWidth >= 2000:
+        this.columnNum = 4;
+        break;
+      case window.innerWidth >= 1200:
+        this.columnNum = 3;
+        break;
+      case window.innerWidth >= 992:
+        this.columnNum = 2;
+        break;
+      case window.innerWidth >= 700:
+        this.columnNum = 2;
+        break;
+      default:
+        this.columnNum = 1;
+        break;
     }
   }
 

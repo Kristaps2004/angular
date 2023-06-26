@@ -1,22 +1,14 @@
-.content {
+mat-grid-list {
   margin: 30px;
 
-  .title {
-    display: flex;
-    justify-content: center;
-  }
+  mat-grid-tile {
+    background: lightblue;
+    max-width: 500px;
+    border-radius: 10px;
 
-  mat-grid-list {
-    margin: 30px;
-
-    mat-grid-tile {
-      background: lightblue;
-      max-width: 500px;
-
-      .repo-thumb {
-        width: 100%;
-        object-fit: cover;
-      }
+    .repo-thumb {
+      width: 100%;
+      object-fit: cover;
     }
   }
 
@@ -26,7 +18,7 @@
 
     h1 {
       margin: 0;
-      font-size: 2vh;
+      font-size: 18px;
     }
 
     .button-repo {
@@ -50,11 +42,6 @@
 
 .repo-owner {
   font-size: 18px;
-}
-
-.button {
-  display: flex;
-  justify-content: center;
 }
 
 @media screen and (max-width: 480px) {
