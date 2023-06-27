@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {ThemeService} from "../../services/theme.service";
-import {Observable, startWith} from "rxjs";
-import {MatSlideToggleChange} from "@angular/material/slide-toggle";
+import {Observable, startWith, take, tap} from "rxjs";
 
 @Component({
   selector: 'app-toolbar',
@@ -27,8 +26,17 @@ export class ToolbarComponent {
     this.toggleSideNav.emit();
   }
 
-  onThemeChange(slideValue: MatSlideToggleChange) {
-    this.themeService.toggleDarkTheme(slideValue.checked)
+  onThemeChange() {
+    this.themeService.isDarkTheme$
+      .pipe(
+        take(1),
+        tap(
+          (isDarkTheme) => {
+            console.log({isDarkTheme});
+            this.themeService.toggleDarkTheme(!isDarkTheme);
+          }
+        )
+      )
+      .subscribe();
   }
 }
-

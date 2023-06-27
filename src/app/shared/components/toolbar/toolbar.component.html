@@ -5,10 +5,16 @@
   </button>
   <span>Angular Portfolio</span>
   <span class="example-spacer"></span>
-  <mat-icon>light_mode</mat-icon>
-  <mat-slide-toggle (change)="onThemeChange($event)" [checked]="isDarkTheme$ | async"></mat-slide-toggle>
-  <mat-icon>nightlight</mat-icon>
-  <button aria-label="Example icon-button with share icon" class="example-icon" mat-icon-button>
+  <div class="border"
+  [class.darkMode]="isDarkTheme$ | async">
+    <button class="example-icon" mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <button (click)="onThemeChange()" class="example-icon" mat-icon-button>
+    <mat-icon>{{(isDarkTheme$ | async) ? 'nightlight' : 'light_mode'}}</mat-icon>
+  </button>
+  <button class="example-icon" mat-icon-button>
     <mat-icon>settings</mat-icon>
   </button>
 </mat-toolbar>

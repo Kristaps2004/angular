@@ -1,3 +1,16 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.border{
+  border-right: 1px solid black;
+  &.darkMode{
+    border-right-color: #FFFFFF;
+  }
+}
+
+.example-icon{
+  margin-left: 4px;
+}
+
+
