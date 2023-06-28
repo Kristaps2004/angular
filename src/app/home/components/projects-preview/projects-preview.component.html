@@ -1,23 +1,7 @@
 <div class="project-preview-container">
   <h1 class="title">Projects:</h1>
   <div class="project-preview-wrapper">
-    <mat-grid-list [cols]="columnNum" gutterSize="40px" rowHeight="2:1">
-      <mat-grid-tile *ngFor="let repo of githubRepos$ | async ">
-        <img *ngIf="repo.image" [src]="repo.image" class="repo-thumb">
-        <mat-grid-tile-footer>
-          <div class="footer-container">
-            <h1 class="repo-title">{{repo.name}}</h1>
-            <div class="footer-wrapper">
-              <img alt="profile picture" class="profile-img" src="{{repo.owner.avatar_url}}">
-              <h1 class="repo-owner">{{repo.owner.login}}</h1>
-            </div>
-          </div>
-          <div>
-            <button (click)="goToUrl(repo.html_url)" class="button-repo" mat-stroked-button>Open in github</button>
-          </div>
-        </mat-grid-tile-footer>
-      </mat-grid-tile>
-    </mat-grid-list>
+    <app-project-card [githubRepos]="githubRepos$ | async"></app-project-card>
   </div>
   <div class="project-router-button">
     <button mat-stroked-button routerLink="/projects">More projects</button>

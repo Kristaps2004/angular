@@ -2,14 +2,15 @@
   flex: 1 1 auto;
 }
 
-.border{
+.border {
   border-right: 1px solid black;
-  &.darkMode{
+
+  &.darkMode {
     border-right-color: #FFFFFF;
   }
 }
 
-.example-icon{
+.example-icon {
   margin-left: 4px;
 }
 

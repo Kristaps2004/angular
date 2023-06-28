@@ -10,9 +10,13 @@ export class RepoPreviewService {
   public githubRepos$: Observable<GithubRepo[]>;
   private githubReposImage: { name: string, image: string } [] = [
     {
-      name: 'angular',
-      image: 'https://repository-images.githubusercontent.com/653585193/c8851ba1-ea86-455f-8e46-a002fe451f6b'
-    }
+      name: 'Projekts-Lidosta-DP11-3Grupa',
+      image: 'https://repository-images.githubusercontent.com/368505861/52f93c5c-ea83-4a29-9122-8b87e5d6f615'
+    },
+    {
+      name: 'Kafejnica-projekts',
+      image: 'https://repository-images.githubusercontent.com/480921182/f7a81107-44f4-426f-8767-7e998b9ab67b'
+    },
   ];
 
   private githubRepoSubject: BehaviorSubject<GithubRepo[]> = new BehaviorSubject<GithubRepo[]>([]);
@@ -34,7 +38,6 @@ export class RepoPreviewService {
               repo.image = this.githubReposImage.find(
                 (repoImage) => repoImage.name === repo.name
               )?.image;
-
               return repo;
             }
           ));

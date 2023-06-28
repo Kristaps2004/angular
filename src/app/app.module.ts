@@ -32,19 +32,21 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {NgOptimizedImage} from "@angular/common";
 import {GalleryDialogComponent} from './gallery/components/gallery-dialog/gallery-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
-import {ProjectGridComponent} from './projects/components/project-grid/project-grid.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import {HttpClientModule} from '@angular/common/http';
 import {HeroSectionComponent} from './home/components/hero-section/hero-section.component';
 import {MatListModule} from "@angular/material/list";
 import {ProjectsPreviewComponent} from './home/components/projects-preview/projects-preview.component';
+import {ProjectCardComponent} from './shared/components/project-card/project-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
     ToolbarComponent,
     SidenavComponent,
+    ProjectCardComponent,
 
     HomeComponent,
     HeroSectionComponent,
@@ -57,7 +59,6 @@ import {ProjectsPreviewComponent} from './home/components/projects-preview/proje
     ProjectsPreviewComponent,
 
     ProjectsComponent,
-    ProjectGridComponent,
 
   ],
   imports: [
