@@ -20,7 +20,7 @@ export class ProjectCardComponent implements OnInit {
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private repoPreviewService: RepoPreviewService,
-    ) {
+  ) {
     this.errorMessage$ = this.repoPreviewService.errorMessage$;
   }
 

@@ -30,12 +30,12 @@ export class ToolbarComponent {
       .pipe(
         filter((event) => event instanceof NavigationEnd)
       )
-      .subscribe(() =>{
-      this.searchForm.reset({name:undefined})
-    })
+      .subscribe(() => {
+        this.searchForm.reset({name: undefined})
+      })
   }
 
-  public get isProjectsView(): boolean{
+  public get isProjectsView(): boolean {
     return this.router.url === '/projects'
   }
 
@@ -43,7 +43,7 @@ export class ToolbarComponent {
     this.toggleSideNav.emit();
   }
 
-  onThemeChange() {
+  onThemeChange(): void {
     this.themeService.isDarkTheme$
       .pipe(
         take(1),
@@ -57,8 +57,7 @@ export class ToolbarComponent {
       .subscribe();
   }
 
-  resetForm() {
-    this.searchForm.reset({name:undefined});
+  public resetForm(): void {
+    this.searchForm.reset({name: undefined});
   }
-
 }
