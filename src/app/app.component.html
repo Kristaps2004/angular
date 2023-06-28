@@ -1,4 +1,4 @@
-<app-toolbar (toggleSideNav)="sidenav.drawer.toggle()"></app-toolbar>
+<app-toolbar [searchForm]="searchForm"  (toggleSideNav)="sidenav.drawer.toggle()"></app-toolbar>
 <app-sidenav #sidenav>
   <router-outlet></router-outlet>
 </app-sidenav>

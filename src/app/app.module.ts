@@ -16,7 +16,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatTabsModule} from "@angular/material/tabs";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule} from './app-routing.module';
 import {SkillsComponent} from "./home/components/skills/skills.component";
 import {LanguagesComponent} from "./home/components/languages/languages.component";
@@ -89,6 +89,7 @@ import {ProjectCardComponent} from './shared/components/project-card/project-car
     MatGridListModule,
     HttpClientModule,
     MatListModule,
+    FormsModule,
   ],
 
   providers: [],

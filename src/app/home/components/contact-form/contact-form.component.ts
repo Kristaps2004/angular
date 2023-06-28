@@ -9,6 +9,7 @@ import {FormGroup} from "@angular/forms";
 export class ContactFormComponent {
   @Input()
   public profileForm!: FormGroup;
+
   @Input()
   public errorMessage!: string;
 

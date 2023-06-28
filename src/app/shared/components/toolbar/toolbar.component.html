@@ -5,7 +5,23 @@
   </button>
   <span>Angular Portfolio</span>
   <span class="example-spacer"></span>
-  <div [class.darkMode]="isDarkTheme$ | async"
+  <form *ngIf="isProjectsView"
+        [formGroup]="searchForm"
+        class="form">
+    <mat-form-field class="search-form-field">
+      <input
+        formControlName="name"
+        matInput
+        type="text"
+        placeholder="Search"
+      />
+      <button  matSuffix mat-icon-button aria-label (click)="resetForm()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+  <div *ngIf="isProjectsView"
+       [class.darkMode]="isDarkTheme$ | async"
        class="border">
     <button class="example-icon" mat-icon-button>
       <mat-icon>search</mat-icon>
