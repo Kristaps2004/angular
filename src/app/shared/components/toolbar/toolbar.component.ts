@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ThemeService} from "../../services/theme.service";
-import {filter, Observable, startWith, take, tap} from "rxjs";
+import {BehaviorSubject, filter, fromEvent, Observable, startWith, take, tap} from "rxjs";
 import {FormGroup} from "@angular/forms";
 import {NavigationEnd, Router} from "@angular/router";
 
@@ -17,11 +17,22 @@ export class ToolbarComponent {
   public toggleSideNav: EventEmitter<void> = new EventEmitter<void>();
 
   public isDarkTheme$: Observable<boolean>;
+  public isMobileView$: Observable<boolean>;
+
+  public display: boolean = false;
+  private isMobileViewSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor(
     private router: Router,
     public themeService: ThemeService,
   ) {
+    this.isMobileView$ = this.isMobileViewSubject.asObservable();
+    fromEvent(window, 'resize')
+      .pipe(
+      )
+      .subscribe(
+        () => this.isMobileViewSubject.next(window.innerWidth < 540)
+      )
     this.isDarkTheme$ = this.themeService.isDarkTheme$
       .pipe(
         startWith(false)
@@ -59,5 +70,9 @@ export class ToolbarComponent {
 
   public resetForm(): void {
     this.searchForm.reset({name: undefined});
+  }
+
+  onPress(): void{
+    this.display = !this.display;
   }
 }

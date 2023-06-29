@@ -1,21 +1,22 @@
 <mat-toolbar>
-  <button (click)="onToggleSideNav()" aria-label="Example icon-button with menu icon" class="example-icon"
+  <button (click)="onToggleSideNav()"
+          class="search-icon"
           mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
-  <span>Angular Portfolio</span>
-  <span class="example-spacer"></span>
+  <span class="title" *ngIf="!display || ((isMobileView$ | async) === false && display)">Angular Portfolio</span>
+  <span class="spacer"></span>
   <form *ngIf="isProjectsView"
         [formGroup]="searchForm"
         class="form">
-    <mat-form-field class="search-form-field">
+    <mat-form-field *ngIf="display" class="search-form-field">
       <input
         formControlName="name"
         matInput
         placeholder="Search"
         type="text"
       />
-      <button (click)="resetForm()" mat-icon-button matSuffix>
+      <button (click)="resetForm(); onPress()" mat-icon-button matSuffix>
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>
@@ -23,14 +24,11 @@
   <div *ngIf="isProjectsView"
        [class.darkMode]="isDarkTheme$ | async"
        class="border">
-    <button class="example-icon" mat-icon-button>
+    <button class="search-icon" mat-icon-button (click)="onPress()" *ngIf="!display">
       <mat-icon>search</mat-icon>
     </button>
   </div>
-  <button (click)="onThemeChange()" class="example-icon" mat-icon-button>
+  <button (click)="onThemeChange()" class="search-icon" mat-icon-button>
     <mat-icon>{{(isDarkTheme$ | async) ? 'nightlight' : 'light_mode'}}</mat-icon>
-  </button>
-  <button class="example-icon" mat-icon-button>
-    <mat-icon>settings</mat-icon>
   </button>
 </mat-toolbar>

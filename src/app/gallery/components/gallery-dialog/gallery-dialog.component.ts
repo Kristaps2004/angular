@@ -9,7 +9,7 @@ import {AsyncPipe} from "@angular/common";
 import {Observable} from "rxjs";
 import {ThemeService} from "../../../shared/services/theme.service";
 import {GalleryDialogData} from "../../interfaces/gallery-dialog-data.interface";
-import {MAT_RIPPLE_GLOBAL_OPTIONS} from "@angular/material/core";
+
 
 
 @Component({
