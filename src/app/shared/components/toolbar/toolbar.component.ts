@@ -72,7 +72,7 @@ export class ToolbarComponent {
     this.searchForm.reset({name: undefined});
   }
 
-  onPress(): void{
+  onPress(): void {
     this.display = !this.display;
   }
 }

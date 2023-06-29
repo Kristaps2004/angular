@@ -11,7 +11,6 @@ import {ThemeService} from "../../../shared/services/theme.service";
 import {GalleryDialogData} from "../../interfaces/gallery-dialog-data.interface";
 
 
-
 @Component({
   selector: 'app-gallery-dialog',
   templateUrl: './gallery-dialog.component.html',

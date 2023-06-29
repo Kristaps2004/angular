@@ -4,7 +4,7 @@
           mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
-  <span class="title" *ngIf="!display || ((isMobileView$ | async) === false && display)">Angular Portfolio</span>
+  <span *ngIf="!display || ((isMobileView$ | async) === false && display)" class="title">Angular Portfolio</span>
   <span class="spacer"></span>
   <form *ngIf="isProjectsView"
         [formGroup]="searchForm"
@@ -24,7 +24,7 @@
   <div *ngIf="isProjectsView"
        [class.darkMode]="isDarkTheme$ | async"
        class="border">
-    <button class="search-icon" mat-icon-button (click)="onPress()" *ngIf="!display">
+    <button (click)="onPress()" *ngIf="!display" class="search-icon" mat-icon-button>
       <mat-icon>search</mat-icon>
     </button>
   </div>
