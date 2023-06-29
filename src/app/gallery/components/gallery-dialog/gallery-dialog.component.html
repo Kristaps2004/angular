@@ -1,15 +1,15 @@
-<mat-card class="example-card">
+<mat-card class="gallery-card">
   <mat-card-header>
-    <div class="example-header-image" mat-card-avatar></div>
-    <mat-card-title>Kristaps Ešmits</mat-card-title>
+    <div class="header-image" mat-card-avatar></div>
+    <mat-card-title [class.darkMode]="isDarkTheme$ | async">Kristaps Ešmits</mat-card-title>
     <mat-card-subtitle>
       <mat-icon class="location-icon">location_on</mat-icon>
       {{currentImg.alt}}
     </mat-card-subtitle>
     <div class="menu-icon-wrapper">
       <button
+        [class.darkMode]="isDarkTheme$ | async"
         [matMenuTriggerFor]="menu"
-        aria-label="Example icon-button with a menu"
         class="menu-icon"
         mat-icon-button
       >

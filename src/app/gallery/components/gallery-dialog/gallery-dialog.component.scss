@@ -1,5 +1,13 @@
-.example-card {
+.gallery-card {
   padding: 20px;
+
+  mat-card-title {
+    color: black;
+
+    &.darkMode {
+      color: white;
+    }
+  }
 
   .mat-card-subtitle {
     padding: 0;
@@ -9,7 +17,7 @@
     display: flex;
   }
 
-  .example-header-image {
+  .header-image {
     background-image: url('https://cdn.discordapp.com/attachments/780878761536389141/1119146726847168572/tmp_0bec7548-60c0-4727-94f6-9fc4f48bdf83.jpg');
     background-size: cover;
   }
@@ -24,6 +32,13 @@
     display: flex;
     justify-content: flex-end;
     flex: 1 10%;
+
+    .menu-icon {
+      color: black;
+      &.darkMode {
+        color: #FFFFFF;
+      }
+    }
   }
 
   .img {
@@ -37,7 +52,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .example-card {
+  .gallery-card {
     padding: 10px;
 
     .img {
@@ -47,7 +62,7 @@
 }
 
 @media (orientation: landscape) and (max-width: 480px) {
-  .example-card {
+  .gallery-card {
     max-width: 95vw;
     padding: 10px;
 

@@ -42,7 +42,7 @@ export class RepoPreviewService {
     this.githubRepos$ = this.searchForm.get('name')?.valueChanges
       .pipe(
         startWith(''),
-        debounceTime(300),
+        debounceTime(400),
         distinctUntilChanged(),
         withLatestFrom(this.githubRepoSubject.asObservable()),
         map(

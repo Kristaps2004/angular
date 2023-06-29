@@ -11,9 +11,9 @@
             placeholder="Artjoms"
             required
           />
-          <mat-error *ngIf="profileForm.get('name')?.invalid"
-          >{{errorMessage}}</mat-error
-          >
+          <mat-error *ngIf="profileForm.get('name')?.invalid">
+            {{errorMessage}}
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
@@ -22,7 +22,7 @@
             formControlName="surname"
             id="surname"
             matInput
-            placeholder="Artjoms"
+            placeholder="Galkins"
             required
           />
           <mat-error *ngIf="profileForm.get('surname')?.invalid"

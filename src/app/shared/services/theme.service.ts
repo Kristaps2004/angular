@@ -8,7 +8,7 @@ export class ThemeService {
 
   public isDarkTheme$: Observable<boolean>;
 
-  private isDarkThemeSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  private isDarkThemeSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>((localStorage.getItem('darkMode') === 'true'));
 
   private renderer: Renderer2;
 
@@ -22,8 +22,10 @@ export class ThemeService {
           (isVisible: boolean) => {
             if (isVisible) {
               this.renderer.addClass(document.body, 'darkMode');
+              localStorage.setItem('darkMode', 'true');
             } else {
               this.renderer.removeClass(document.body, 'darkMode');
+              localStorage.setItem('darkMode', 'false');
             }
           }
         )

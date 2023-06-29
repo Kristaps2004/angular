@@ -1,15 +1,15 @@
-.example-container {
+.sidenav-container {
   height: calc(100% - 64px);
 }
 
-.example-sidenav-content {
+.sidenav-content {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
 }
 
-.example-sidenav {
+.sidenav {
   padding: 20px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 @media only screen and (max-width: 599px) {
-  .example-container {
+  .sidenav-container {
     height: calc(100% - 59px);
   }
 
